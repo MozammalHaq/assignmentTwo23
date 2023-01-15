@@ -45,7 +45,6 @@ img {
 /* header CSS */
 header {
     background-color: rgba(255, 144, 14, 0.1);
-    ;
 }
 
 .header-content {
@@ -109,7 +108,7 @@ nav h2 a {
     66%   {color: #620eff}
     99%   {color: #ff0ecb}
     100%  {color: #ff0e56}
-  }
+}
 
 /* Feature CSS */
 .feature {
@@ -224,6 +223,7 @@ nav h2 a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: .3s;
 }
 
 .single-fact img {
@@ -234,6 +234,9 @@ nav h2 a {
 
 .single-fact:hover img {
     transform: skewX(45deg);
+}
+.single-fact:hover {
+    box-shadow: 0 0 10px #FF900E;
 }
 
 .single-fact h2,
@@ -332,4 +335,94 @@ footer small {
     background-color: #FFF4E7;
     display: block;
     border-top: 1px solid #ffb969;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 576px) {
+
+    /* header css */
+    header {
+        padding: 0 10px;
+    }
+
+    .header-content,
+    .header-text,
+    .feature,
+    .feature-two,
+    .feature-two-text,
+    .feature-two-image,
+    .facts-section,
+    .facts-section .section-title,
+    .sponsors-section,
+    .sponsors-section .section-title,
+    .footer {
+        width: auto
+    }
+
+    nav h2 {
+        margin-bottom: 0;
+    }
+
+    .menu a {
+        padding-left: 0;
+    }
+
+    nav,
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu a {
+        font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 45px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .feature {
+        flex-direction: column;
+    }
+
+    .feature-image {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-title {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .feature-two-content {
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    .feature-btn {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .facts,
+    .sponsors {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .sponsors {
+        row-gap: 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 10px;
+    }
 }
