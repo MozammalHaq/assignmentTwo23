@@ -34,6 +34,12 @@ img {
     border-radius: 5px;
     border: none;
     margin-top: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px #FF900E;
 }
 
 /* header CSS */
@@ -91,8 +97,19 @@ nav h2 a {
 .header-text h1 {
     font-size: 64px;
     font-weight: 700;
-    color: #131313
+    color: #131313;
+    animation: color-animation 4s linear infinite;
 }
+
+@keyframes color-animation {
+    0%    {color: #FF900E}
+    32%   {color: #c6f714}
+    33%   {color: #0efff3}
+    65%   {color: #0e5aff}
+    66%   {color: #620eff}
+    99%   {color: #ff0ecb}
+    100%  {color: #ff0e56}
+  }
 
 /* Feature CSS */
 .feature {
@@ -246,12 +263,73 @@ nav h2 a {
 .sponsors img {
     width: auto;
     filter: grayscale(100%);
+    transition: .3s;
+}
+
+.sponsors img:hover {
+    filter: grayscale(0%);
 }
 
 /* Footer CSS */
+
+footer {
+    background-color: #FFF4E7;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.footer h2 {
+    font-size: 28px;
+    border-bottom: 1px solid #424242;
+    width: 200px;
+    padding-bottom: 5px;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #131313;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.footer ul li a:hover {
+    color: #FF900E;
+    padding-left: 5px;
+    border-left: 2px solid #FF900E;
+}
+
+.footer input {
+    padding: 12px 15px;
+    border: 1px solid #727272;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .btn {
+    font-size: 16px;
+    margin: 0;
+}
+
 footer small {
     padding: 20px;
     text-align: center;
     background-color: #FFF4E7;
     display: block;
+    border-top: 1px solid #ffb969;
 }
