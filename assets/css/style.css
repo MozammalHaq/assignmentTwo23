@@ -417,6 +417,11 @@ footer small {
         row-gap: 20px;
     }
 
+    .single-fact {
+        width: 150px;
+        margin: 0 auto;
+    }
+
     .sponsors {
         row-gap: 30px;
     }
